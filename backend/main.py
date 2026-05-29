@@ -46,7 +46,10 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-cors_origins = os.getenv("CORS_ORIGINS", "http://localhost:3000").split(",")
+cors_origins = os.getenv(
+    "CORS_ORIGINS", 
+    "http://localhost:3000,http://localhost:5173,https://rag-creator-chatbot.vercel.app"
+).split(",")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=cors_origins,
