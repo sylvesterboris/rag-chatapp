@@ -1,0 +1,26 @@
+# Secrets and API keys
+.env
+.env.local
+
+# Python caches and virtualenvs
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Databases
+chroma_db/
+backend/chroma_db/
+
+# Frontend dependencies and builds
+node_modules/
+dist/
+.vercel/
+frontend/node_modules/
+frontend/dist/
+frontend/.vercel/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
