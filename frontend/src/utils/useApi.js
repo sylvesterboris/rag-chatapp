@@ -1,6 +1,8 @@
 // useApi.js — API calls and streaming SSE hook
 
-const API_BASE = '/api'
+const API_BASE = import.meta.env.VITE_API_URL 
+  ? `${import.meta.env.VITE_API_URL}/api` 
+  : '/api';
 
 export async function ingestVideos(urlA, urlB) {
   const res = await fetch(`${API_BASE}/ingest`, {
